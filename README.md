@@ -1,7 +1,7 @@
 # hash map
 This is a hash map with Robin-Hood hashing.
 
-.cpp file contains stdin/out interface with following options:
+.cpp file contains demo stdin/out interface with following options:
 
 1. "+ k x" to add pair _k: x_ to map.
 2. "- k" to erase elem with key _k_ from map.
