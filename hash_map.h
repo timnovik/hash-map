@@ -1,7 +1,3 @@
-#ifndef ALGO_HASH_MAP_H
-#define ALGO_HASH_MAP_H
-#endif //ALGO_HASH_MAP_H
-
 #include <memory>
 #include <vector>
 #include <stdexcept>
@@ -219,8 +215,8 @@ public:
             if (i == capacity_) {
                 i = 0;
             }
-             if (i == hash_(key) % capacity_) {  // костыль на какой-то очень тупой случай, когда все ячейки заняты,
-                 return;                         // но нужного значения нет (не уверен, что такое вообще бывает)
+             if (i == hash_(key) % capacity_) {
+                 return;
              }
         }
         if (table_[i]->used && table_[i]->val.first == key) {
@@ -238,8 +234,8 @@ public:
             if (i == capacity_) {
                 i = 0;
             }
-            if (i == hash_(key) % capacity_) {  // костыль на какой-то очень тупой случай, когда все ячейки заняты,
-                return end();                   // но нужного значения нет (не уверен, что такое вообще бывает)
+            if (i == hash_(key) % capacity_) {
+                return end();
             }
         }
         if (table_[i]->used) {
